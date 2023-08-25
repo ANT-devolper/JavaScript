@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <style>
+        div#area{
+            font: normal 23px Arial;
+            background-color: #006400;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        interaja..
+    </div>
+    
+    <script>
+        window.document.getElementById('area').addEventListener('click', clicar)
+        window.document.getElementById('area').addEventListener('mouseenter', entrou)
+        window.document.getElementById('area').addEventListener('mouseleave', saiu)
+        function clicar(){
+            window.document.getElementById('area').innerText = 'Clicou'
+            window.document.getElementById('area').style.background = 'red'
+        }
+        function entrou(){
+            window.document.getElementById('area').style.background = '#035203'
+        }
+        function saiu(){
+            window.document.getElementById('area').style.background = '#006400'
+        }
+    </script>
+</body>
+</html>

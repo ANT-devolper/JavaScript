@@ -15,10 +15,8 @@
 <script>
     window.document.getElementsByTagName('input')[2].addEventListener('click', clicou)
     function clicou(){
-        var tn1 = window.document.getElementById('in1')
-        var tn2 = window.document.querySelector('input#in2')
-        var n1 = Number(tn1.value)
-        var n2 = Number(tn2.value)
+        var n1 = Number(window.document.getElementById('in1').value)
+        var n2 = Number(window.document.querySelector('input#in2').value)
         var s = n1 + n2
         window.document.getElementById('res').innerHTML = `A soma entre ${n1}+${n2} é ${s}`
     }

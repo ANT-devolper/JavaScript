@@ -7,18 +7,17 @@
 </head>
 <body>
     <h1>Sistema de Multas</h1>
-    <input type="number" name="velo" id="ivelo">
-    <input type="button" value="Enviar" id="butao">
+    <input type="number" name="velo" id="velo"  max="120" min="1" style="width: 200px;">
+    <input type="button" value="Enviar" id="butao" onclick="calc()">
     <div id="res">Resultado</div>
-<script>
-    window.document.getElementById('butao').addEventListener('click', clicou)
-    var velocidade = Number(window.document.getElementById('ivelo').value);
-    function clicou(){
-        if(velocidade>80){
-        window.document.getElementById('res').innerHTML = ``
-    }
-    }
-
-</script>
+    <script>
+        function calc(){
+            var vel = Number(window.document.querySelector('input#velo').value)
+            window.document.querySelector('div#res').innerHTML = `<p>Sua velocidade é de ${vel}</p>`
+            if(vel>80){
+                window.document.querySelector('div#res').innerHTML += `<p>Você foi <strong>MULTADO</strong> por exesso velocidade</p>`
+            }
+        }
+    </script>
 </body>
 </html>
